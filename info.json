@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "2693e97b79b2d0ca81ce03fb68ba4ff3e1c5a4c7",
+    "author": "Jeroen Ooms <jeroenooms@gmail.com>",
+    "time": "2021-05-04 10:56:44",
+    "files": 5,
+    "merge": false,
+    "message": "Prepare release\n"
+  },
+  "remote": "https://github.com/ropensci/av",
+  "pkg": "av"
+}

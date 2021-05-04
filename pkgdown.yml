@@ -1,0 +1,10 @@
+pandoc: '2.5'
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  articles/spectrograms: spectrograms.html
+last_built: 2021-07-12T05:38Z
+urls:
+  reference: https://docs.ropensci.org/av/reference
+  article: https://docs.ropensci.org/av/articles
+
