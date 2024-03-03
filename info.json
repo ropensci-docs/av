@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "675434c789bc80e378fbd6d2c039a8148288c520",
+    "author": "Jeroen Ooms <jeroenooms@gmail.com>",
+    "time": "2024-03-03 00:04:02",
+    "files": 2,
+    "merge": false,
+    "message": "Do not override bitrate by default\n"
+  },
+  "repo": "https://github.com/ropensci/av",
+  "pkg": "av"
+}
