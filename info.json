@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "d551361cb3b55255ff85e4c0fbe07e47d0cd67ff",
+    "author": "Jeroen Ooms <jeroenooms@gmail.com>",
+    "time": "2026-08-30T11:05:42Z",
+    "files": 2,
+    "merge": false,
+    "message": "Update CI\n"
+  },
+  "repo": "https://github.com/ropensci/av",
+  "pkg": "av",
+  "time": "2026-08-30T11:25:18Z"
+}
