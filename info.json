@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "a8dbf77ac586f5fa8ec6040a9a3bf4e73432ad00",
+    "author": "Ed Baker <edwbaker@gmail.com>",
+    "time": "2026-10-27T18:13:30Z",
+    "files": 3,
+    "merge": false,
+    "message": "Do not inherit the bit rate from a lossless input (#68)\n\nav_audio_convert() could not write Ogg Vorbis at all: the encoder is\ngiven the decoder's bit rate, and for a lossless input that is the raw\nPCM rate (1411200 for 44.1 kHz 16-bit stereo). libvorbis has no setting\nnear that, so vorbis_encode_setup_managed() fails and the conversion\ndies in avcodec_open2() with \"encoder setup failed\".\n\nThe encoder choice was not the problem; av already resolves ogg to\nlibvorbis. The same input converts fine as soon as the bit rate is\nplausible, and a lossy source whose own bit rate is already sane was\nnever affected.\n\nOnly inherit the input bit rate when the input is not lossless, using\nthe codec descriptor's AV_CODEC_PROP_LOSSLESS. An explicit bit_rate is\nhonoured as before; otherwise the encoder picks its own default. This\nalso makes 48 kHz wav to .opus work.\n\nThe documented default, \"will match input\", could never hold for a\nlossless input into a lossy encoder, so the parameter docs are updated.\n\nNote that wav to mp3 without an explicit bit_rate changes: libmp3lame\nwas silently clamping 1411200 to its 320 kbps ceiling and now uses its\nown 128 kbps default."
+  },
+  "repo": "https://github.com/ropensci/av",
+  "pkg": "av",
+  "time": "2026-10-27T19:24:10Z"
+}
